@@ -11,41 +11,43 @@
 </head>
 
 <body>
-    <Header>
-        <img src="assets/images/logo.png" alt="logo" class="logo" style="width:200px" />
-        <div class="navbar-menu">
-            <a href="#" data-page="home">Home</a>
-            <a href="#" data-page="feature">Dashboard</a>
-            <a href="#" data-page="proxies">Proxies</a>
-            <button>
-                Admin Panel
-            </button>
-        </div>
-        <div class="toggle-navbar">
-            <img src="assets/images/menu.png" onclick="openNav()" width="30px" height="30px" style="cursor:pointer" />
-        </div>
-    </Header>
-    <div id="sidenav" class="sidenav">
-        <img src="assets/images/minus-sign-light.png" alt="cancel" width="20px" height="20px" onclick="closeNav()"
-            style="float:right;margin:20px;cursor:pointer" />
-        <ul style="margin:80px 0 ;color:red">
-            <li> <a href="#" data-page="home">Home</a></li>
-            <li> <a href="#" data-page="feature">Feature</a></li>
-            <li><a href="#" data-page="proxies">Proxies</a></li>
-            <li><a href="#" data-page="faq">FAQ</a></li>
-        </ul>
-    </div>
 
 
-    <body>
-        <div class="center-container">
-         <div class="d-flex-no-wrap border-15 bg-dark mt-20">
-              <div class="admin-container  mlr-0 border-0 pb-0">
-                <div class="admin-container-title">Coupon Generator</div>
-                <div class="sub-title">Create Coupons</div>
+
+  <Header>
+      <img src="assets/images/logo.png" alt="logo" class="logo" />
+      <div class="navbar-menu">
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="feature">Feature</a>
+          <a href="#" data-page="proxies">Proxies</a>
+          <a href="#" data-page="faq">FAQ</a>
+          <button>
+              Dashboard
+          </button>
+      </div>
+      <div class="toggle-navbar">
+          <img src="assets/images/menu.png" onclick="openNav()" width="30px" height="30px" style="cursor:pointer" />
+      </div>
+  </Header>
+  <div id="sidenav" class="sidenav">
+      <img src="assets/images/minus-sign-light.png" alt="cancel" width="20px" height="20px" onclick="closeNav()"
+          class="close-icon" />
+      <ul>
+          <li> <a href="#" data-page="home">Home</a></li>
+          <li> <a href="#" data-page="feature">Feature</a></li>
+          <li><a href="#" data-page="proxies">Proxies</a></li>
+          <li><a href="#" data-page="faq">FAQ</a></li>
+      </ul>
+  </div>
+
+        <div class="center-container mb-50">
+         <div class="d-flex-no-wrap mt-20 bg-light border-15">
+              <div class="data-container bg-light pt-20">
+                 <div class="data-container-title">Coupon Generator</div>
+               <div class="sub-title">Create Coupons</div>
                 <div class="row">
                 <div>Select Package</div>
-                 <select name="quantity" id="quantity"class="dropdown-fluid" style="margin-top:0">
+                 <select name="quantity" id="quantity"class="dropdown-fluid mt-0">
                         <option value="volvo">25</option>
                         <option value="saab">80</option>
                         <option value="mercedes">12</option>
@@ -64,12 +66,17 @@
                   <div>Limit</div>
                 <input type="text" placeholder="6 User"/>
                 </div><br/>
-                <button class="view-button" style="width:150px">Save</button>
+                <button class="light-button">Save</button>
              </div>
-             <div class="admin-container mlr-0 border-0 pb-0">
-             <div class="admin-container-title">Active Coupons</div>
-             <div class="d-flex-j-center">
+             <div class="data-container m-0 border-0 w-200 border-right">
+             <div class="data-container-title active-text">Active Coupons</div>
+             <div class="d-flex-j-center mt-20">
              <div class="scroll-coupons">
+             <div class="coupons">
+             <span>3GB USA ISP</span>
+             <span>30%- 'DNKU30'</span>
+             <span>30 uses left</span>
+             </div>
              <div class="coupons">
              <span>3GB USA ISP</span>
              <span>30%- 'DNKU30'</span>
@@ -92,7 +99,7 @@
              </div>
              </div>
              <div class="ml-auto">
-              <button class="view-button mt-40" style="width:150px">Delete All</button>
+              <button class="light-button mtr-30 ">Delete All</button>
               <div>
              </div>
          </div>
@@ -101,28 +108,31 @@
     </div>
 
     <!-- use manage box -->
-     <div class="admin-container bg-url" style="min-width:300px">
-     <div class="admin-container-title mt-20">Manage User</div><br/>
-     <div class="row" style="padding:40px 0px;width:70%">
-     <div class="font-size:21px;font-weight:700">Discord Id</div>
-     <input type="text" placeholder="5441215482"/>
-     <button class="view-button ml-auto">Search</button>
-     </div>
+     <div class="data-container bg-light second">
+     <div class="data-container-title pl-30">Manage User</div><br/>
+     <div class="row row-padding">
+     <div class="discord">Discord Id</div>
+     <input type="text" placeholder="ex: 5441215482"/>
+     <button class="light-button ml-auto">Search</button>
+   </div>
+     <div class="dark-container">
      <div class="image-container">
-     <img src="assets/images/logo" alt="img" class="image-user"/>
+     <img src="assets/images/profile.png" alt="img" class="image-user"/>
      </div>
-     <div class="d-flex-j-between mt-10">
-     <button class="view-button mt-10">Add data</button>
-     <button class="view-button mt-10 w-120">Reset User data</button>
-     <button class="view-button mt-10">Delete USer</button>
+     <div class="user-name">JohnDoe #1111</div>
+     <div class="flex-container mt-20">
+     <button class="light-button mt-10 mr-5 w-90">Add data</button>
+     <button class="light-button mt-10 w-120 mr-5">Reset User data</button>
+     <button class="light-button mt-10 w-90">Delete User</button>
      </div>
+   </div>
  </div>
 
-     <div class="admin-container" style="height:220px;min-width:250px">
-                <div class="admin-container-title mt-20">Manage<br/>Packages</div>
-                <div class="row">
+     <div class="data-container bg-light third">
+                <div class="data-container-title">Manage<br/>Packages</div>
+                <div class="row mt-10">
                 <div>Select Package</div>
-                 <select name="quantity" id="quantity"class="dropdown-fluid" style="margin-top:0">
+                 <select name="quantity" id="quantity"class="dropdown-fluid mt-0">
                         <option value="volvo">25</option>
                         <option value="saab">80</option>
                         <option value="mercedes">12</option>
@@ -130,9 +140,19 @@
                     </select>
                     </div>
                     <div class="d-flex-j-between mt-10">
-     <button class="view-button mt-10">Enable</button>
-     <button class="view-button mt-10 w-140">Disable</button>
+     <button class="light-button mt-10">Enable</button>
+     <button class="light-button mt-10">Disable</button>
      </div>
-                    </div>
+        </div>
+                    <script src="assets/js/index.js"></script>
+                    <script>
+                        function openNav() {
+                            document.getElementById("sidenav").style.width = "250px";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("sidenav").style.width = "0px";
+                        }
+                    </script>
 </body>
 </html>
