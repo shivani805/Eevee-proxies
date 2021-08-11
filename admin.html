@@ -7,29 +7,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/logo1.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <img src="assets/images/logo.png" alt="logo" class="logo" style="width:200px" />
+    <Header>
+        <img src="assets/images/logo.png" alt="logo" class="logo" style="width:200px" />
+        <div class="navbar-menu">
+            <a href="#" data-page="home">Home</a>
+            <a href="#" data-page="feature">Dashboard</a>
+            <a href="#" data-page="proxies">Proxies</a>
+            <button>
+                Admin Panel
+            </button>
+        </div>
+        <div class="toggle-navbar">
+            <img src="assets/images/menu.png" onclick="openNav()" width="30px" height="30px" style="cursor:pointer" />
+        </div>
+    </Header>
+    <div id="sidenav" class="sidenav">
+        <img src="assets/images/minus-sign-light.png" alt="cancel" width="20px" height="20px" onclick="closeNav()"
+            style="float:right;margin:20px;cursor:pointer" />
+        <ul style="margin:80px 0 ;color:red">
+            <li> <a href="#" data-page="home">Home</a></li>
+            <li> <a href="#" data-page="feature">Feature</a></li>
+            <li><a href="#" data-page="proxies">Proxies</a></li>
+            <li><a href="#" data-page="faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <body>
+        <div class="center-container">
+            <!-- first box -->
+            <div class="admin-container pt-20">
+                 <div class="admin-container-title pl-20">DataCenter</div>
+                <span class="pl-20">Packages</span>
+                <div class="proxy-package-container">
+                    <div class="proxy-package-item">
+                        <span>15 Proxies</span>
+                        <span>USA ISP Premium</span>
+                        <span>10days left</span>
+                        <button class="view-button">View All</button>
+                    </div>
+                    <div class="proxy-package-item">
+                        <span>15 Proxies</span>
+                        <span>USA ISP Premium</span>
+                        <span>10days left</span>
+                        <button class="view-button">View All</button>
+                    </div>
+                    <div class="proxy-package-item">
+                        <span>15 Proxies</span>
+                        <span>USA ISP Premium</span>
+                        <span>10days left</span>
+                        <button class="view-button">View All</button>
+                    </div>
+                    <div class="proxy-package-item">
+                        <span>15 Proxies</span>
+                        <span>USA ISP Premium</span>
+                        <span>10days left</span>
+                        <button class="view-button">View All</button>
+                    </div>
+                </div>
+
+                 <div class="proxies-list-container">
+                        <div class="scroll-container">
+                            <ul class="list">
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                 <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                            </ul>
+                        </div>
+                           <button class="view-button">Copy All</button>
+                    </div>
 
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <a href="#" data-page="home">Home</a>
-                <a href="#" data-page="feature">Feature</a>
-                <a href="#" data-page="proxies">Proxies</a>
-                <a href="#" data-page="faq">FAQ</a>
-                <button>
-                    Dashboard
-                </button>
-            </ul>
+            <!-- second box -->
+               <div class="admin-container pt-20">
+                <div class="d-flex-no-wrap">
+                    <div>
+                <div class="pl-20 admin-container-title">Total Data</div>
+                <span class="pl-20">Residential</span>
+                <div class="proxy-package-container">
+                    <div class="proxy-package-item mb-10">
+                        <span >15 Proxies</span>
+                        <span>USA ISP Premium</span>
+                        <span>10days left</span>
+                        <button class="view-button">View All</button>
+                    </div>
+                    <div class="short-box-container mt-0">
+                        <div class="short-box font-12 mtl-10-8">Quantity
+                            <select name="quantity" id="quantity">
+                                <option value="volvo">25</option>
+                                <option value="saab">80</option>
+                                <option value="mercedes">12</option>
+                                <option value="audi">06</option>
+                            </select>
+                        </div>
+                        <div class="short-box mt-10 font-12">Country
+                            <select name="country" id="country">
+                                <option value="volvo">GB</option>
+                                <option value="saab">MB</option>
+                                <option value="mercedes">KB</option>
+                                <option value="audi">TB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="short-box-container mt-0">
+                        <div class="short-box font-12 mtl-10-8">Type
+                            <select name=" type" id="type" style="width:70px;">
+                                <option value="volvo">Sticky</option>
+                                <option value="saab">80</option>
+                                <option value="mercedes">12</option>
+                                <option value="audi">06</option>
+                            </select>
+                        </div>
+                        <div class="short-box button-text">Generate</div>
+                    </div>
+                </div>
+         </div>
+                <div class="admin-second-container">
+                <div class="admin-container-title mtb-5-20 font-20">Purchases</div>
+                <div class="purchase-section">
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+                <div class="purchase-item">
+                <span>5GB Package</span >
+                <span>3 Used</span >
+                <span>Purchased 03/01/2020</span>
+                </div>
+
+
+                </div>
+                </div>
+            </div>
+             <div class="proxies-list-container">
+                        <div class="scroll-container">
+                            <ul class="list">
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                 <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                                <li>192.95.80.194:6774:eevee:resis</li>
+                            </ul>
+                        </div>
+                           <button class="view-button">Copy All</button>
+                    </div>
+            </div>
+
+                    <div class="admin-col-container">
+                <!-- third box -->
+                <div class="admin-container" style="width: 220px;background-color: #492e1b">
+                    <div class="admin-container-title">Data Center</div>
+                    <span>Purchase</span><br />
+                    <select name="quantity" id="quantity" class="dropdown-fluid">
+                        <option value="volvo">25</option>
+                        <option value="saab">80</option>
+                        <option value="mercedes">12</option>
+                        <option value="audi">06</option>
+                    </select>
+                    <div class="short-box-container">
+                        <div class="short-box" style="font-size:12px">Quantity
+                            <select name="quantity" id="quantity" style="width: 50px">
+                                <option value="volvo">25</option>
+                                <option value="saab">80</option>
+                                <option value="mercedes">12</option>
+                                <option value="audi">06</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="proxies-box-button data-center">Purchase</button>
+                    <div class="short-box quantity">$ 150</div>
+                </div>
+                <!-- fourth box -->
+                <div class="admin-container" style="width: 220px;background-color: #492e1b">
+                    <div class="admin-container-title">Residential</div>
+                    <span>Purchase</span><br />
+                    <select name="quantity" id="quantity"class="dropdown-fluid">
+                        <option value="volvo">25</option>
+                        <option value="saab">80</option>
+                        <option value="mercedes">12</option>
+                        <option value="audi">06</option>
+                    </select>
+                    <div class="short-box-container">
+                        <div class="short-box" style="font-size:12px">Quantity
+                            <select name="quantity" id="quantity" style="width: 50px">
+                                <option value="volvo">25</option>
+                                <option value="saab">80</option>
+                                <option value="mercedes">12</option>
+                                <option value="audi">06</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="proxies-box-button data-center">Purchase</button>
+                    <div class="short-box quantity">$ 150</div>
+                </div>
+            </div>
         </div>
-    </nav>
-</body>
+        </div>
+    </body>
 
 </html>
