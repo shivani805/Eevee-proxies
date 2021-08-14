@@ -916,3 +916,38 @@ width:120px
 .coupons span:nth-child(3){
    font-size:10px;
 }
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #988473;
+}
+::-webkit-scrollbar-thumb {
+  background: #dbc9b0;
+}
+#style1::-webkit-scrollbar-thumb {
+  border-radius: 0px 5px 0px 0px;
+}
+#style2::-webkit-scrollbar-thumb {
+  border-radius: 5px 0px 0px 0px;
+}
+#style2::-webkit-scrollbar-track {
+  border-radius: 5px 0px 0px 0px;
+}
+#style1::-webkit-scrollbar-track {
+  border-radius: 0px 5px 0px 0px;
+}
+/* ! Other Browser */
+html {
+  --scrollbarBG: #988473;
+  --thumbBG: #dbc9b0;
+}
+body {
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dac1a2;
+}
+
